@@ -16,28 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-1S-ddU">
-                                <rect key="frame" x="107" y="235" width="200" height="100"/>
-                                <state key="normal" backgroundImage="uk"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSM-g0-XjH">
+                                <rect key="frame" x="107" y="358" width="200" height="100"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="italy"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-1I-gBW">
-                                <rect key="frame" x="107" y="102" width="200" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-1I-gBW">
+                                <rect key="frame" x="107" y="98" width="200" height="100"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSM-g0-XjH">
-                                <rect key="frame" x="107" y="364" width="200" height="100"/>
-                                <state key="normal" backgroundImage="italy"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-1S-ddU">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="uk"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P7j-1S-ddU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ief-rj-jai"/>
-                            <constraint firstItem="Wxn-1I-gBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="Ohv-T6-V4x"/>
-                            <constraint firstItem="aSM-g0-XjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="hla-79-rSO"/>
-                            <constraint firstItem="Wxn-1I-gBW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j7k-wx-RoM"/>
-                            <constraint firstItem="aSM-g0-XjH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oxm-wz-wnb"/>
-                            <constraint firstItem="P7j-1S-ddU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="uan-d2-0fm"/>
+                            <constraint firstItem="aSM-g0-XjH" firstAttribute="centerX" secondItem="P7j-1S-ddU" secondAttribute="centerX" id="CcD-00-iyZ"/>
+                            <constraint firstItem="Wxn-1I-gBW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kfp-tZ-UEZ"/>
+                            <constraint firstItem="P7j-1S-ddU" firstAttribute="centerX" secondItem="Wxn-1I-gBW" secondAttribute="centerX" id="eeA-uI-FkN"/>
+                            <constraint firstItem="aSM-g0-XjH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="emv-dT-8b5"/>
+                            <constraint firstItem="aSM-g0-XjH" firstAttribute="top" secondItem="P7j-1S-ddU" secondAttribute="bottom" constant="30" id="fRJ-zS-otG"/>
+                            <constraint firstItem="Wxn-1I-gBW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="rf8-Xd-YNg"/>
+                            <constraint firstItem="P7j-1S-ddU" firstAttribute="top" secondItem="Wxn-1I-gBW" secondAttribute="bottom" constant="30" id="z5n-9g-hcm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jQk-et-0jG"/>
