@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         correctAnswer = Int.random(in: 0...2) // Numero aleatorio
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased()) - Score: \(score)"
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             score += 1
         } else {
             answerResponse = "Wrong"
-            score -= 1
+            score = (score - 1) < 0 ? 0 : (score - 1)
         }
         
         // Cria um alerta
