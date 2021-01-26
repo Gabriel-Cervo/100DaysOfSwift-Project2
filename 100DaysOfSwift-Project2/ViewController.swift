@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsAnswered = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,26 +51,42 @@ class ViewController: UIViewController {
         correctAnswer = Int.random(in: 0...2) // Numero aleatorio
         title = "\(countries[correctAnswer].uppercased()) - Score: \(score)"
     }
+    
+    func resetGame(action: UIAlertAction!) {
+        score = 0
+        questionsAnswered = 0
+        
+        askQuestion()
+    }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         var answerResponse: String
+        let message: String
+        
+        questionsAnswered += 1
         
         if sender.tag == correctAnswer {
             answerResponse = "Correct"
+            message = ""
             score += 1
         } else {
             answerResponse = "Wrong"
+            message = "That's the flag of \(countries[sender.tag].capitalizingFirstLetter())"
             score = (score - 1) < 0 ? 0 : (score - 1)
         }
         
-        // Cria um alerta
-        let alertController = UIAlertController(title: answerResponse, message: "Your score is \(score)", preferredStyle: .alert)
-        // O preferredStyle tem duas opcoes, o alert (da um alerta) e o .actionSheet, que desliza as opcoes debaixo
-        // Alerta para mostrar quando algo mudar e actionSheet para perguntar um set de opcoes
+        let alertMessage = questionsAnswered < 10 ? message : "Your final score is \(score)!"
+        let alertAction = questionsAnswered < 10 ?
+            UIAlertAction(title: "Continue", style: .default, handler: askQuestion) :
+            UIAlertAction(title: "Reset Game", style: .default, handler: resetGame) // Aqui o style tem 3 opcoes, .default, .cancel e .destructive
         
-        // adiciona o botao de continuar
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        // Aqui o style tem 3 opcoes, .default, .cancel e .destructive
+        // Cria um alerta
+        let alertController = UIAlertController(title: answerResponse, message: alertMessage, preferredStyle: .alert)
+        // O preferredStyle tem duas opcoes, o alert (da um alerta) e o .actionSheet, que desliza as opcoes debaixo
+        // Quando usar: alert para mostrar quando algo mudar e actionSheet para perguntar um set de opcoes
+        
+        // adiciona o botao de continuar / resetar
+        alertController.addAction(alertAction)
         
         // Chama o alerta
         present(alertController, animated: true)

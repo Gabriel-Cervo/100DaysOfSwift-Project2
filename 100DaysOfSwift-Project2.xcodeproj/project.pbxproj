@@ -13,6 +13,7 @@
 		8462DFCA25BEEA4400C737A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8462DFC825BEEA4400C737A1 /* Main.storyboard */; };
 		8462DFCC25BEEA4900C737A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8462DFCB25BEEA4900C737A1 /* Assets.xcassets */; };
 		8462DFCF25BEEA4900C737A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8462DFCD25BEEA4900C737A1 /* LaunchScreen.storyboard */; };
+		8462DFD825C0529600C737A1 /* capitalizingFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462DFD725C0529600C737A1 /* capitalizingFirstLetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8462DFCB25BEEA4900C737A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8462DFCE25BEEA4900C737A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8462DFD025BEEA4900C737A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8462DFD725C0529600C737A1 /* capitalizingFirstLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capitalizingFirstLetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8462DFCB25BEEA4900C737A1 /* Assets.xcassets */,
 				8462DFCD25BEEA4900C737A1 /* LaunchScreen.storyboard */,
 				8462DFD025BEEA4900C737A1 /* Info.plist */,
+				8462DFD725C0529600C737A1 /* capitalizingFirstLetter.swift */,
 			);
 			path = "100DaysOfSwift-Project2";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				8462DFC725BEEA4400C737A1 /* ViewController.swift in Sources */,
 				8462DFC325BEEA4400C737A1 /* AppDelegate.swift in Sources */,
 				8462DFC525BEEA4400C737A1 /* SceneDelegate.swift in Sources */,
+				8462DFD825C0529600C737A1 /* capitalizingFirstLetter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
