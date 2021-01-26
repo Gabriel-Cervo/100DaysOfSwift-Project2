@@ -36,7 +36,9 @@ class ViewController: UIViewController {
         askQuestion()
     }
     
-    func askQuestion() {
+    // o action é necessário para poder ser usado como handler no botao
+    // default = nil
+    func askQuestion(action: UIAlertAction! = nil) {
         countries.shuffle() // Sorteia os paises
         // Existe tambem o metodo .shuffled(), que retorna um array novo
         
@@ -49,6 +51,29 @@ class ViewController: UIViewController {
         title = countries[correctAnswer].uppercased()
     }
 
-
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        var answerResponse: String
+        
+        if sender.tag == correctAnswer {
+            answerResponse = "Correct"
+            score += 1
+        } else {
+            answerResponse = "Wrong"
+            score -= 1
+        }
+        
+        // Cria um alerta
+        let alertController = UIAlertController(title: answerResponse, message: "Your score is \(score)", preferredStyle: .alert)
+        // O preferredStyle tem duas opcoes, o alert (da um alerta) e o .actionSheet, que desliza as opcoes debaixo
+        // Alerta para mostrar quando algo mudar e actionSheet para perguntar um set de opcoes
+        
+        // adiciona o botao de continuar
+        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        // Aqui o style tem 3 opcoes, .default, .cancel e .destructive
+        
+        // Chama o alerta
+        present(alertController, animated: true)
+    }
+    
 }
 
