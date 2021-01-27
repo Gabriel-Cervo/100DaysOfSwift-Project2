@@ -49,7 +49,8 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         correctAnswer = Int.random(in: 0...2) // Numero aleatorio
-        title = "\(countries[correctAnswer].uppercased()) - Score: \(score)"
+        title = "\(countries[correctAnswer].uppercased())"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
     }
     
     func resetGame(action: UIAlertAction!) {
@@ -90,6 +91,15 @@ class ViewController: UIViewController {
         
         // Chama o alerta
         present(alertController, animated: true)
+    }
+    
+    @objc func showScore() {
+        let scoreAlert = UIAlertController(title: "Your score is:", message: "\(score) points!", preferredStyle: .alert)
+        let closeAlert = UIAlertAction(title: "Ok", style: .default, handler: .none)
+        
+        scoreAlert.addAction(closeAlert)
+        
+        present(scoreAlert, animated: true, completion: .none)
     }
     
 }
